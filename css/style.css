@@ -1,0 +1,52 @@
+img{
+    height: 40%;
+    width: 25%;
+}
+
+
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+   
+}
+
+
+h1{
+color: rgb(0, 0, 0);
+}
+ 
+#top{
+    height: 50px;
+    background-color: #1182c4;
+    margin-bottom: 20px;
+}
+
+.center {
+    margin: auto;
+    width: 30%;
+    border: 3px solid black;
+    padding: 10px;
+    }
+
+
+.precio {
+    color: blueviolet;
+}
+
+
+.center1{
+    margin: 10px;
+    width: 60%;
+    border: 3px solid black;
+    padding: 20px;
+    }
+
+.titulo {
+    margin: 10px;
+    width: 43%;
+    border: 5px solid rgba(35, 233, 65, 0.608);
+    padding: 10px;
+    }
+
