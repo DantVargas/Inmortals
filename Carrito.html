@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="styleCart.css">
     <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="Index.html">Inmortal's</a>
@@ -20,7 +23,9 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="Sobre Nosotros.html" target="_blank">Sobre Nosotros</a>
-              </li>
+              </li> 
+              
+              
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Zapatillas
@@ -34,20 +39,140 @@
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
+              <button class="btn btn-outline-success" type="submit">Carrito</button>
             </form>
           </div>
         </div>
       </nav>
-    <center><h1>Carrito</h1></center>
 
 
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootdey">
+<div class="row bootstrap snippets">
+    <div class="col-lg-3 col-md-3 col-sm-12">
+        
+                
+        <!-- End Best Seller -->
+    </div>
+    <div class="clearfix visible-sm"></div>
+
+    <!-- Cart -->
+    <div class="col-lg-9 col-md-9 col-sm-12">
+        <div class="col-lg-12 col-sm-12">
+            <span class="title">SHOPPING CART</span>
+        </div>
+        <div class="col-lg-12 col-sm-12 hero-feature">
+            <div class="table-responsive">
+                <table class="table table-bordered tbl-cart">
+                    <thead>
+                        <tr>
+                            <td class="hidden-xs">Imagen</td>
+                            <td>Nombre Producto</td>
+                            <td>Size</td>
+                            <td>Color</td>
+                            <td class="td-qty">Cantidad</td>
+                            <td>Precio Unidad</td>
+                            <td>Sub Total</td>
+                            <td>Eliminar</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="hidden-xs">
+                                <a href="#">
+                                    <img src="Imagenes zapatillas/Kd15 Gris.png" alt="Age Of Wisdom Tan Graphic Tee" title="" width="47" height="47">
+                                </a>
+                            </td>
+                            <td><a href="kd15.html" target="_blank">Nike KD15</a>
+                            </td>
+                            <td>
+                                <select name="">
+                                    <option value="" selected="selected">41</option>
+                                    <option value="">42</option>
+                                </select>
+                            </td>
+                            <td>-</td>
+                            <td>
+                                <div class="input-group bootstrap-touchspin"><span class="input-group-btn"><button class="btn btn-default bootstrap-touchspin-down" type="button">-</button></span><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input type="text" name="" value="1" class="input-qty form-control text-center" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span><span class="input-group-btn"><button class="btn btn-default bootstrap-touchspin-up" type="button">+</button></span></div>
+                            </td>
+                            <td class="price">$ 130.000</td>
+                            <td>$ 130.000</td>
+                            <td class="text-center">
+                                <a href="#" class="remove_cart" rel="2">
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="hidden-xs">
+                                <a href="#">
+                                    <img src="Imagenes zapatillas/Kyrie Infinity Gris.png" alt="Adidas Men Red Printed T-shirt" title="" width="47" height="47">
+                                </a>
+                            </td>
+                            <td><a href="kyrie.html" target="_blank">Kyrie Infinity</a>
+                            </td>
+                            <td>
+                                <select name="">
+                                    <option value="">41</option>
+                                    <option value="" selected="selected">44</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="">
+                                    <option value="" selected="selected">Gris</option>
+                                    <option value="">Azul</option>
+                                </select>
+                            </td>
+                            <td>
+                                <div class="input-group bootstrap-touchspin"><span class="input-group-btn"><button class="btn btn-default bootstrap-touchspin-down" type="button">-</button></span><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input type="text" name="" value="2" class="input-qty form-control text-center" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span><span class="input-group-btn"><button class="btn btn-default bootstrap-touchspin-up" type="button">+</button></span></div>
+                            </td>
+                            <td class="price">$ 110.000</td>
+                            <td>$ 220.000</td>
+                            <td class="text-center">
+                                <a href="#" class="remove_cart" rel="1">
+                                    <i class="fa fa-trash-o"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" align="right">Total</td>
+                            <td class="total" colspan="2"><b>$ 350.000</b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btn-group btns-cart">
+                <a href="Index.html" target="_blank"><button type="button" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Continuar Comprando</button></a> &nbsp; &nbsp;
+                <button type="button" class="btn btn-primary">Actualizar Carro</button> &nbsp; &nbsp;
+                <button type="button" class="btn btn-primary">Pagar <i class="fa fa-arrow-circle-right"></i></button>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Cart -->
+</div>
+</div>
+
+<!––« footer «––>
+  <div class="footer-basic">
+    <footer>
+        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="Index.html">Inicio</a></li>
+            <li class="list-inline-item"><a href="#">Servicios</a></li>
+            <li class="list-inline-item"><a href="Sobre Nosotros.html">Sobre Nosotros</a></li>
+            <li class="list-inline-item"><a href="#">Terminos</a></li>
+            <li class="list-inline-item"><a href="#">Politicas de Privacidad</a></li>
+        </ul>
+        <p class="copyright">Company Name © 2018</p>
+    </footer>
+</div>
 
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+    
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
 </body>
 </html>
