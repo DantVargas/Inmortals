@@ -1,23 +1,23 @@
-<!DOCTYPE html>
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inmortal's</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'zapatillas/css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{% static 'zapatillas/css/style.css' %}">
+    <title>Inmortal's</title>
 </head>
 <body>
 <header id="header">
     <!––« Barra de Navegacion«––>
   <nav class="navbar navbar-expand-lg bg-body-tertiary" >
     <div class="container-fluid">
-      <a class="navbar-brand" href="Index.html">Inmortal's</a>
+      <a class="navbar-brand" href="index.html">Inmortal's</a>
       <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,7 +34,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="Zapatillasd Basquetball.html" >Zapatillas</a>
+                  <a class="nav-link active" aria-current="page" href="Zapatillas Basquetball.html" >Zapatillas</a>
                 </li>
         </ul>
           <form class="d-flex" role="search">
@@ -57,21 +57,21 @@
         </div>
         <div class="carousel-inner imagencarousel">
           <div class="carousel-item active" data-bs-interval="10000">
-            <a href="#" ><img src="Imagenes zapatillas/imagen carrusel 4.png.jpg" class="d-block w-100" alt=""></a>
+            <a href="#" ><img src="{% static 'zapatillas/img/imagen_carrusel_4jpg' %}" class="d-block w-100" alt="img1"></a>
             <div class="carousel-caption d-none d-md-block">
               <h2></h2>
               <p>Some representative placeholder content for the first slide.</p>
             </div>
           </div>
           <div class="carousel-item imagencarousel" data-bs-interval="2000">
-            <a href="#" ><img src="Imagenes zapatillas/imagen carrusel11.png" class="d-block w-100" alt=""></a>
+            <a href="#" ><img src="{% static 'zapatillas/img/imagen_carrusel11.png' %}" class="d-block w-100" alt="img2"></a>
             <div class="carousel-caption d-none d-md-block">
               <h2></h2>
               <p>Some representative placeholder content for the second slide.</p>
             </div>
           </div>
           <div class="carousel-item imagencarousel">
-            <a href="#"><img src="Imagenes zapatillas/tatum-1.png" class="d-block w-100" alt=""></a>
+            <a href="#"><img src="{% static 'zapatillas/img/tatum-1.png' %}" class="d-block w-100" alt="img3"></a>
             <div class="carousel-caption d-none d-md-block">
               <h2></h2>
               <p>Some representative placeholder content for the third slide.</p>
@@ -102,7 +102,7 @@
     <div class="col">
       <a href="kyrie.html">
         <div class="card">
-        <img src="Imagenes zapatillas/Kyrie Infinity Gris.png" class="card-img-top" alt="...">
+        <img src="{% static 'zapatillas/img/Kyrie_Infinity_Gris.png' %}" class="card-img-top" alt="kyrie">
         <div class="card-body">
           <h5 class="card-title">Kyrie Infinity</h5>
           <p class="card-text">$90.000</p>
@@ -112,7 +112,7 @@
     <div class="col">
       <a href="kd15.html">
       <div class="card">
-        <img src="Imagenes zapatillas/Kd15 Gris.png" class="card-img-top" alt="...">
+        <img src="{% static 'zapatillas/img/Kd15_Gris.png' %}" class="card-img-top" alt="kd15">
         <div class="card-body">
           <h5 class="card-title">KD 15</h5>
           <p class="card-text">$100.000</p>
@@ -122,7 +122,7 @@
     <div class="col">
       <a href="Zoomf4.html">
         <div class="card">
-        <img src="Imagenes zapatillas/Zf4.png" class="card-img-top" alt="...">
+        <img src="{% static 'zapatillas/img/Zf4.png' %}" class="card-img-top" alt="zf4">
         <div class="card-body">
           <h5 class="card-title">Zoom Freak 4</h5>
           <p class="card-text">$95.000</p>
@@ -131,7 +131,7 @@
     </div>
     <div class="col">
       <a href="Trae Young.html"><div class="card">
-        <img src="Imagenes zapatillas/Trae Young.png" class="card-img-top" alt="...">
+        <img src="{% static 'zapatillas/img/Trae_Young.png' %}" class="card-img-top" alt="Trae_Young">
         <div class="card-body">
           <h5 class="card-title">Trae Young</h5>
           <p class="card-text">$120.000</p>
