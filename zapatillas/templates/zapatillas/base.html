@@ -37,10 +37,25 @@
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="{% url 'zapatillas_basquetball' %}" >Zapatillas</a>
                 </li>
+                {% if user.is_authenticated %}
+                <li>
+                  <a href="{% url 'logout' %}">Cerrar Sesion</a>
+
+                </li>
+                <li>
+                  <a href="#">{{user.username}}</a>
+                </li>
+                {% else %}
+                  <li>
+                    <a href="{% url 'login' %}">Iniciar Sesion</a>
+                </li>
+                {% endif %}
+                  <li>
+
+                  </li>
+                
         </ul>
-          <form class="d-flex" role="search">
-            <button class="btn btn-outline-success" type="submit" ><a href="formulario.html">Iniciar Sesion</button></a>
-          </form> 
+          
       </div>
     </div>
   </nav>
