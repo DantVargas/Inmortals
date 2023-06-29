@@ -1,0 +1,37 @@
+{% extends 'zapatillas/base.html'%}
+{% block contenido %}
+{% load humanize %}
+
+<section class="container">
+    <div class="table-hover table-responsive mt-5">
+        <table class="table table-striped]">
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Color</th>
+                <th>Imagen</th>
+                <th>Marca</th>
+                <th></th>
+                <th>Opciones</th>
+            </tr>
+            {% for p in productos %}
+            <tr>
+                <tr>
+                    <td>{{p.nombre}}</td>
+                    <td>{{p.precio | intcomma}}</td>
+                    <td>{{p.color}}</td>
+                    {% if p.imagen %}
+                    <td><img src="{{p.imagen.url}}" alt="img Producto" class="w-25"></td>
+                    {% endif %} 
+                    <td>{{p.marca}}</td>
+                    <td> <a href="{% url 'editar_zapatillas' p.id %}" class="btn btn-primary">Modificar </a> </td>
+                    <td> <a href="{% url 'eliminar_zapatillas' p.id %}" class="btn btn-danger"> Eliminar</a></td>
+                </tr>
+                {% endfor %}
+            </tr>
+        </table>
+    </div>  
+</section>
+
+
+{% endblock %}

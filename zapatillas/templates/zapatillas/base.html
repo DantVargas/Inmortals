@@ -17,7 +17,7 @@
     <!––« Barra de Navegacion«––>
   <nav class="navbar navbar-expand-lg bg-body-tertiary" >
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Inmortal's</a>
+      <a class="navbar-brand" href="/">Inmortal's</a>
       <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,7 +34,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="Zapatillas Basquetball.html" >Zapatillas</a>
+                  <a class="nav-link active" aria-current="page" href="{% url 'zapatillas_basquetball' %}" >Zapatillas</a>
                 </li>
         </ul>
           <form class="d-flex" role="search">
@@ -43,7 +43,7 @@
       </div>
     </div>
   </nav>
-  <div id="top" class="container-fluid"><div ><center><h2>Las Mas Populares!!</h2></center></div>
+  
     
   
     </div>
@@ -59,21 +59,23 @@
 
 
   <!––« footer «––>
-  <div conteiner fluid>
-  <div class="footer-basic">
-    <footer>
-        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-        <ul class="list-inline">
-            <li class="list-inline-item"><a href="index.html">Inicio</a></li>
-            <li class="list-inline-item"><a href="#">Servicios</a></li>
-            <li class="list-inline-item"><a href="Sobre Nosotros.html">Sobre Nosotros</a></li>
-            <li class="list-inline-item"><a href="#">Terminos</a></li>
-            <li class="list-inline-item"><a href="#">Politicas de Privacidad</a></li>
-        </ul>
-        <p class="copyright">Inmortal's © 2023</p>
-    </footer>
-</div>
-</div>
+  <section class="conteiner">
+  
+        <div class="footer-basic">
+          <footer class="footer-basic">
+              <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href="index.html">Inicio</a></li>
+                  <li class="list-inline-item"><a href="#">Servicios</a></li>
+                  <li class="list-inline-item"><a href="Sobre Nosotros.html">Sobre Nosotros</a></li>
+                  <li class="list-inline-item"><a href="#">Terminos</a></li>
+                  <li class="list-inline-item"><a href="#">Politicas de Privacidad</a></li>
+              </ul>
+              <p class="copyright">Inmortal's © 2023</p>
+          </footer>
+      
+        </div>
+    </section>
   
   
    
