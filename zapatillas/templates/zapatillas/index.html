@@ -1,102 +1,38 @@
+{% extends 'zapatillas/base.html'%}
+{% block contenido %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="{% static 'zapatillas/css/style.css' %}">
-    <title>Inmortal's</title>
-</head>
-<body>
-<header id="header">
-    <!––« Barra de Navegacion«––>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" >
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Inmortal's</a>
-      <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="Sobre Nosotros.html" >Sobre Nosotros</a>
-          </li>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="carrito.html" >Carrito</a>
-              </li>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="Zapatillas Basquetball.html" >Zapatillas</a>
-                </li>
-        </ul>
-          <form class="d-flex" role="search">
-            <button class="btn btn-outline-success" type="submit" ><a href="formulario.html">Iniciar Sesion</button></a>
-          </form> 
+
+<!––« carousel «––>
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+
+      <img src="{% static 'zapatillas/img/imagen_carrusel_4.jpg' %}" class="d-block w-100" alt="zap1">
+      <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
-  </nav>
-  <div id="top" class="container-fluid"><div ><center><h2>Las Mas Populares!!</h2></center></div>
-    
-  
+    <div class="carousel-item">
+      <img src="{% static 'zapatillas/img/imagen_carrusel_kobe.png'%}" class="d-block w-100" alt="zap2">
+      <div class="carousel-caption d-none d-md-block">
+      </div>
     </div>
-    <!––« carousel «––>
-    <div class="conteiner-sm">
-      <div id="carouselExampleDark" class="carousel carousel-dark slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner imagencarousel">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <a href="#" ><img src="{% static 'zapatillas/img/imagen_carrusel_4jpg' %}" class="d-block w-100" alt="img1"></a>
-            <div class="carousel-caption d-none d-md-block">
-              <h2></h2>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item imagencarousel" data-bs-interval="2000">
-            <a href="#" ><img src="{% static 'zapatillas/img/imagen_carrusel11.png' %}" class="d-block w-100" alt="img2"></a>
-            <div class="carousel-caption d-none d-md-block">
-              <h2></h2>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item imagencarousel">
-            <a href="#"><img src="{% static 'zapatillas/img/tatum-1.png' %}" class="d-block w-100" alt="img3"></a>
-            <div class="carousel-caption d-none d-md-block">
-              <h2></h2>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>&nbsp;
-      <div>
+    <div class="carousel-item">
+      <img src="{% static 'zapatillas/img/tatum-1.png'%}" class="d-block w-100" alt="zap3">
+      </div>
     </div>
-    
-    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
-  </div>&nbsp;
-
-
-  <center><h1>Las Mejores Ofertas!</h1></center>
+  <center><h1>Las Mejores Ofertasaa!</h1></center>
 <div class="container-fluid">
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
@@ -120,12 +56,12 @@
       </div></a>
     </div>
     <div class="col">
-      <a href="Zoomf4.html">
+      <a href="ja1.html">
         <div class="card">
-        <img src="{% static 'zapatillas/img/Zf4.png' %}" class="card-img-top" alt="zf4">
+        <img src="{% static 'zapatillas/img/ja1.png' %}" class="card-img-top" alt="zf4">
         <div class="card-body">
-          <h5 class="card-title">Zoom Freak 4</h5>
-          <p class="card-text">$95.000</p>
+          <h5 class="card-title">Ja1</h5>
+          <p class="card-text">$125.000</p>
         </div>
       </div></a>
     </div>
@@ -141,29 +77,4 @@
   </div>
 </div>
 
-
-
-  <!––« footer «––>
-  <div conteiner fluid>
-  <div class="footer-basic">
-    <footer>
-        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-        <ul class="list-inline">
-            <li class="list-inline-item"><a href="Index.html">Inicio</a></li>
-            <li class="list-inline-item"><a href="#">Servicios</a></li>
-            <li class="list-inline-item"><a href="Sobre Nosotros.html">Sobre Nosotros</a></li>
-            <li class="list-inline-item"><a href="#">Terminos</a></li>
-            <li class="list-inline-item"><a href="#">Politicas de Privacidad</a></li>
-        </ul>
-        <p class="copyright">Inmortal's © 2023</p>
-    </footer>
-</div>
-</div>
-  
-  
-   
-    
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
-</body>
-</html> 
+{% endblock %}
