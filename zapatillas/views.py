@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect,get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Producto, Item_carrito
 from .forms import ProductoForm
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
 
@@ -87,21 +88,38 @@ def vista_logout(request):
 def carrito(request):
     
     item_carrito = Item_carrito.objects.all()
-    productos = Producto.objects.all()
-    return render(request, 'zapatillas/carrito.html', {'Item_carrito': item_carrito, 'productos': productos})
+    context = {
+        'item_carrito': item_carrito
+    }
+    return render(request, 'zapatillas/carrito.html', context)
 
 
-
+@login_required
 def agregar_carrito(request, id):
-    producto= get_object_or_404(Producto, id=id)
-    item = Item_carrito(producto=producto)
-    return redirect(to="carrito")
+    producto = get_object_or_404(Producto, id=id)
 
+    # Verificar si el producto ya está en el carrito
+    item_carrito = Item_carrito.objects.filter(producto=producto, user=request.user).first()
+    if item_carrito:
+        # Si el producto ya está en el carrito, aumentar la cantidad
+        item_carrito.quantity += 1
+        item_carrito.save()
+    else:
+        # Si el producto no está en el carrito, crear un nuevo elemento en el carrito
+        item_carrito = Item_carrito.objects.create(user=request.user, producto=producto)
 
+    return redirect(to='carrito') 
 
+@login_required
 def eliminar_carrito(request, id):
-    item = get_object_or_404(Producto, id=id)
-    item.delete()
-    return redirect(to="carrito")
+    item_carrito = get_object_or_404(Item_carrito, id=id, user=request.user)
+    item_carrito.delete()
+    return redirect('carrito') 
 
 
+
+def sobre_nosotros(request):
+   
+    productos = Producto.objects.all()
+    data = {"productos" : productos}
+    return render(request,'zapatillas/sobre_nosotros.html',data)

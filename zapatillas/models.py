@@ -14,6 +14,8 @@ class Producto(models.Model):
     precio = models.IntegerField()
     color = models.CharField(max_length=50)
     imagen = models.ImageField(upload_to="productos", null=True)
+    imagen2 = models.ImageField(upload_to="productos", null=True)
+    imagen3 = models.ImageField(upload_to="productos", null=True)
     marca =models.ForeignKey(Marca, on_delete=models.PROTECT)
     
     def __str__(self) :

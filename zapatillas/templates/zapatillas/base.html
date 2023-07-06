@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="{% static 'zapatillas/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'zapatillas/js/scrip.js' %}">
+    <link rel="stylesheet" href="{% static 'zapatillas/js/validacion.js' %}">
     <title>Inmortal's</title>
 </head>
 <body>
@@ -87,7 +89,7 @@
               <ul class="list-inline">
                   <li class="list-inline-item"><a href="index.html">Inicio</a></li>
                   <li class="list-inline-item"><a href="#">Servicios</a></li>
-                  <li class="list-inline-item"><a href="Sobre Nosotros.html">Sobre Nosotros</a></li>
+                  <li class="list-inline-item"><a href="{% url 'sobre_nosotros' %}">Sobre Nosotros</a></li>
                   <li class="list-inline-item"><a href="#">Terminos</a></li>
                   <li class="list-inline-item"><a href="#">Politicas de Privacidad</a></li>
               </ul>

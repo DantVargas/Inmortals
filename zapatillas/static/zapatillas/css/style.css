@@ -116,11 +116,11 @@ html
 
 
 .texto{
-    max-width: 500px;
+    max-width: 800px;
     position: relative;
     padding: clamp(1em, 4em, 7em);
     margin: 2em;
-    background-color: #201a3e;
+    background-color: #cecae0;
     border: 2px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
     text-align: center;

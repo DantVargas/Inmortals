@@ -17,12 +17,13 @@ urlpatterns = [
     
     path('carrito', views.carrito, name='carrito'),
 
-    path('carrito/eliminar_carrito/<id>', views.eliminar_carrito, name='eliminar_carrito'),
+    path('carrito/eliminar_carrito/<int:id>', views.eliminar_carrito, name='eliminar_carrito'),
     
-    path('carrito/agregar_carrito/<id>', views.agregar_carrito, name='agregar_carrito'),
+    path('carrito/agregar_carrito/<int:id>', views.agregar_carrito, name='agregar_carrito'),
 
     path('producto_zapatilla/<id>', views.producto_zapatilla, name='producto_zapatilla'),
 
+    path('sobre_nosotros', views.sobre_nosotros, name='sobre_nosotros'),
 
     
 ]
