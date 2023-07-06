@@ -10,62 +10,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="{% static 'zapatillas/css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'zapatillas/js/scrip.js' %}">
-    <link rel="stylesheet" href="{% static 'zapatillas/js/validacion.js' %}">
+    <script src="{% static 'zapatillas/js/scrip.js' %}"></script>
+    <script src="{% static 'zapatillas/js/validacion.js' %}"></script>
     <title>Inmortal's</title>
+    <link rel="icon" href="{% static 'zapatillas/img/inmortals.png' %}" type="image/png">
 </head>
 <body>
 <header id="header">
     <!––« Barra de Navegacion«––>
+    
     <section class="container-fluid">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" >
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">Inmortal's</a>
-      <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="{% static 'zapatillas/img/inmortals.png' %}" alt="Logo de Inmortal's" class="logo-img" height="60">
+          </a>
+          <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'listar_zapatillas' %}" >Listar/Modificar</a>
+                <a class="nav-link" href="{% url 'listar_zapatillas' %}">Listar/Modificar</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'agregar_zapatillas' %}" >Agregar Producto</a>
+                <a class="nav-link" href="{% url 'agregar_zapatillas' %}">Agregar Producto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'carrito' %}" >Carrito</a>
+                <a class="nav-link" href="{% url 'zapatillas_basquetball' %}">Zapatillas</a>
               </li>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <ul class="navbar-nav">
+              {% if user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="{% url 'zapatillas_basquetball' %}" >Zapatillas</a>
+                  <a class="nav-link" href="{% url 'logout' %}">Cerrar Sesión</a>
                 </li>
-                {% if user.is_authenticated %}
-                <li>
-                  <a href="{% url 'logout' %}">Cerrar Sesion</a>
-
+                <li class="nav-item">
+                  <a class="nav-link" href="#">@{{ user.username }}</a>
                 </li>
-                <li>
-                  <a href="#">{{user.username}}</a>
+              {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión/Registrarse</a>
                 </li>
-                {% else %}
-                  <li>
-                    <a href="{% url 'login' %}">Iniciar Sesion</a>
-                </li>
-                {% endif %}
-                  <li>
-
-                  </li>
-                
-        </ul>
-          
-      </div>
-    </div>
-  </nav>
-</section>
-  
+              {% endif %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'carrito' %}">
+                  <img src="{% static 'zapatillas/img/carrito.avif' %}" alt="Carrito" class="carrito-img" height="45">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    
+    
+    
     
   
     </div>
@@ -81,23 +81,27 @@
 
 
   <!––« footer «––>
-  <section class="conteiner">
-  
-        <div class="footer-basic">
-          <footer class="footer-basic">
-              <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-              <ul class="list-inline">
-                  <li class="list-inline-item"><a href="index.html">Inicio</a></li>
-                  <li class="list-inline-item"><a href="#">Servicios</a></li>
-                  <li class="list-inline-item"><a href="{% url 'sobre_nosotros' %}">Sobre Nosotros</a></li>
-                  <li class="list-inline-item"><a href="#">Terminos</a></li>
-                  <li class="list-inline-item"><a href="#">Politicas de Privacidad</a></li>
-              </ul>
-              <p class="copyright">Inmortal's © 2023</p>
-          </footer>
-      
-        </div>
-    </section>
+  <section class="container">
+  <div class="footer-basic">
+    <footer>
+      <div class="social">
+        <a href="#"><i class="icon ion-social-instagram"></i></a>
+        <a href="#"><i class="icon ion-social-snapchat"></i></a>
+        <a href="#"><i class="icon ion-social-twitter"></i></a>
+        <a href="#"><i class="icon ion-social-facebook"></i></a>
+      </div>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="{% url 'index' %}">Inicio</a></li>
+        <li class="list-inline-item"><a href="#">Servicios</a></li>
+        <li class="list-inline-item"><a href="{% url 'sobre_nosotros' %}">Sobre Nosotros</a></li>
+        <li class="list-inline-item"><a href="#">Términos</a></li>
+        <li class="list-inline-item"><a href="#">Políticas de Privacidad</a></li>
+      </ul>
+      <p class="text-center">Inmortal's © 2023</p>
+    </footer>
+  </div>
+</section>
+
   
   
    

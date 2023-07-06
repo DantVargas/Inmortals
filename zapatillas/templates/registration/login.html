@@ -2,30 +2,25 @@
 {% block contenido %}
 {% load crispy_forms_tags %}
 
-    <section class="container">
-    <div class="row">
-        <div class="col-12 col-md-6-offset-md-3">
-
-            <div class="card">
-                <div class="card-body">
-                    <h2>ingresa credenciales</h2>
-                    <hr>
-                    <form action="" method="post">
-
-                        {% csrf_token %}
-                        {{ form | crispy }}
-
-                        <input type="submit" values="ingresar">
-
-                    </form>
-
-                </div>
-            </div>
-
+<section class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <div class="card mt-5 mb-5">
+          <div class="card-body pb-4">
+            <h2>Ingresa tus credenciales</h2>
+            <hr>
+            <form action="" method="post">
+              {% csrf_token %}
+              {{ form | crispy }}
+              <button type="submit" class="btn btn-primary">Ingresar</button>
+              <a href="{% url 'registrarse' %}" class="btn btn-link">Registrarse</a>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
-</section>
-
+  </section>
+  <br><br><br><br><br><br><br><br>
     
 
 {% endblock %}

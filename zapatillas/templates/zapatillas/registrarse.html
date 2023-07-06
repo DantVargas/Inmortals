@@ -1,0 +1,35 @@
+
+{% extends 'zapatillas/base.html'%}
+{% block contenido %}
+{% load static %}
+<br>
+<center><h1>Registro de Usuario</h1></center>
+
+<section class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+      <div class="card mt-5 mb-5">
+        <div class="card-body">
+          <h2>Registrarse</h2>
+          <hr>
+          <form method="post" action="{% url 'registrarse' %}">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="username" class="form-label">Nombre de usuario:</label>
+              <input type="text" id="username" name="username" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+<br><br><br><br><br><br>
+
+  
+{% endblock %}

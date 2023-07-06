@@ -3,6 +3,8 @@ from .models import Producto, Item_carrito
 from .forms import ProductoForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
+from django.conf import settings
 
 
 #Create your views here.
@@ -18,7 +20,7 @@ def zapatillas_basquetball(request):
     data = {"productos" : productos}
     return render(request,'zapatillas/zapatillas_basquetball.html',data)
 
-
+@login_required
 def agregar_producto(request):
     data = {'form': ProductoForm()}
 
@@ -33,11 +35,14 @@ def agregar_producto(request):
 
     return render(request, 'zapatillas/producto/agregarzapatillas.html', data)
 
+
+@login_required
 def listar_producto(request):
     productos = Producto.objects.all()
     data = {'productos' : productos}
     return render(request,'zapatillas/producto/listarzapatillas.html',data)
 
+@login_required
 def editar_producto(request,id):
     producto = get_object_or_404(Producto, id=id)
     data = {'form' : ProductoForm(instance=producto)}
@@ -51,6 +56,7 @@ def editar_producto(request,id):
 
     return render(request,'zapatillas/producto/editarzapatillas.html',data)
 
+@login_required
 def eliminar_producto(request,id):
     producto = get_object_or_404(Producto, id=id)
     producto.delete()
@@ -123,3 +129,14 @@ def sobre_nosotros(request):
     productos = Producto.objects.all()
     data = {"productos" : productos}
     return render(request,'zapatillas/sobre_nosotros.html',data)
+
+
+def registrarse(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        User.objects.create_user(username=username, password=password)
+        return redirect('')  # Redirecciona a la página de inicio después de crear el usuario
+    return render(request, 'zapatillas/registrarse.html')
+
+

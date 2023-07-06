@@ -6,30 +6,32 @@
 
 <center><h1>Carrito de Compras</h1></center>
 <section class="container">
-  <div class="table-hover table-responsive mt-5">    
-    <table class="table table-striped]" >
-      
+  <div class="table-responsive mt-5">    
+    <table class="table table-striped">
+      <thead>
         <tr>
           <th>Producto</th>
           <th>Imagen</th>
           <th>Precio</th>
           <th>Cantidad</th>
-          <th>Acciones</th> <!-- Agregar una columna para las acciones -->
+          <th>Acciones</th>
         </tr>
-      
+      </thead>
       <tbody>
         {% for item in item_carrito %}
           <tr>
             <td>{{ item.producto }}</td>
             {% if item.producto.imagen %}
-              <td><img src="{{item.producto.imagen.url}}" alt="img Producto" class="w-25"></td>
-            {% endif %} 
-            <td> ${{ item.producto.precio | intcomma}}</td>
+              <td><img src="{{ item.producto.imagen.url }}" alt="Imagen Producto" class="w-25"></td>
+            {% else %}
+              <td>No disponible</td>
+            {% endif %}
+            <td>${{ item.producto.precio | intcomma }}</td>
             <td>{{ item.quantity }}</td>
             <td>
               <form action="{% url 'eliminar_carrito' item.id %}" method="POST">
                 {% csrf_token %}
-                <button type="submit">Eliminar</button>
+                <button type="submit" class="btn btn-danger">Eliminar</button>
               </form>
             </td>
           </tr>
@@ -38,8 +40,9 @@
     </table>
   </div>
   
-  <button><a href="#">Realizar Pago</a></button>
+  <button class="btn"><a href="#">Realizar Pago</a></button>
 </section>
+
 
 
 

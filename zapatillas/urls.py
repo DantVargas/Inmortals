@@ -25,5 +25,7 @@ urlpatterns = [
 
     path('sobre_nosotros', views.sobre_nosotros, name='sobre_nosotros'),
 
+    path('registrarse', views.registrarse, name='registrarse'),
+
     
 ]
