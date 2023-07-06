@@ -4,34 +4,39 @@
 {% load static %}
 <section class="container">
   <div class="container">
-    &nbsp; 
-     <center><h1>Zapatillas de Basquetball</h1></center>
+    <div class="text-center mt-5">
+      <h1>Zapatillas de Basquetball</h1>
+    </div>
     <div class="container">
       <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-4">
         {% for p in productos %}
-        <div class="col" >
+        <div class="col mb-4">
           <a href="{% url 'producto_zapatilla' p.id %}">
-            <div class="card" style="width: auto;">
-               {% if p.imagen %}
-               <img src="{{p.imagen.url}}" class="card-img-top" alt="..." >
-               {% endif %} 
-               <div class="card-body">
-                 <h5 class="card-title">{{p.marca}}</h5>
-                 <h5 class="card-title">{{p.nombre}}</h5>
-                 <p class="card-text">${{p.precio | intcomma}}</p>
-                 <form method="post" action="{% url 'agregar_carrito' p.id %}">
+            <div class="card">
+              {% if p.imagen %}
+              <img src="{{p.imagen.url}}" class="card-img-top" alt="Imagen Zapatilla">
+              {% else %}
+              <img src="{% static 'ruta_imagen_por_defecto.jpg' %}" class="card-img-top" alt="Imagen Zapatilla">
+              {% endif %}
+              <div class="card-body">
+                <h5 class="card-title">{{p.marca}}</h5>
+                <h5 class="card-title">{{p.nombre}}</h5>
+                <p class="card-text">${{p.precio | intcomma}}</p>
+                <form method="post" action="{% url 'agregar_carrito' p.id %}">
                   {% csrf_token %}
                   <button type="submit" class="btn btn-primary shadow px-5 py-2">Agregar al carrito</button>
-              </form>
-                </div>
-                
+                </form>
+              </div>
+            </div>
           </a>
-        </div>        
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </div>
 </section>
+
+
 <br><br><br>
 
   {% endblock %}

@@ -100,17 +100,19 @@ html
     margin-bottom:0;
   }
 
+  
+
   .card {
     width: 300px;
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
   }
   
   .card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
   }
   
   .card img {
@@ -189,3 +191,4 @@ ul {
 li {
   margin-bottom: 10px;
 }
+
