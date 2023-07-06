@@ -18,8 +18,8 @@ body{
 }
 
 
-\\ carousel
-  \\
+\\carousel
+\\
 #carouselExampleAutoplaying .carousel-item{
   object-fit: cover;
   object-position: center;
@@ -137,4 +137,24 @@ html
 #map {
 	height: 700px;
 	width: 100%;
+}
+
+
+
+.cart {
+  float: left;
+  width: 50%;
+}
+
+.products {
+  float: right;
+  width: 50%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 10px;
 }

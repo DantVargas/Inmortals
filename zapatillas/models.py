@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Marca(models.Model):
@@ -17,3 +18,15 @@ class Producto(models.Model):
     
     def __str__(self) :
         return self.nombre
+    
+
+class Item_carrito(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
+    cantidad = models.PositiveIntegerField(default=1)
+    def __str__(self):
+        return f"{self.user.username}'s Cart: {self.producto.nombre} x {self.cantidad}"     
+    
+
+
+    

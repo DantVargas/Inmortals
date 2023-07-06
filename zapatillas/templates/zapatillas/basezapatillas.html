@@ -1,0 +1,82 @@
+{% extends 'zapatillas/base.html'%}
+{% block contenido %}
+{% load humanize %}
+{% load static %}
+
+<div class="container-fluid">
+    <img src="{% static 'zapatillas/img/jordan37.png' %}" alt="" height="200" width=480>
+
+    <img src="{% static 'zapatillas/img/suelaJ37.png'%}" alt="" height="200" width="480">
+
+    <img src="{% static 'zapatillas/img//parJ37.png' %}" alt="" height="200" width="480">
+  </div>
+<!-- descrpcion -->
+
+<div class="container"> <center><br>One of the coldest on the hardwood, jordanXXXVII is absolutely fearless.
+    He'll take any shot at any time, and when it's all on the line, look 
+    out, because jordan is about to steal the show. <br>The newest signature 
+    shoes from adidas Basketball and Kyrie Infinity are all about agility and
+    speed, the two elements that make Trae so dynamic. BOOST and Lightstrike 
+    work in tandem with an <br>adaptive SCK360, semi-laceless upper to deliver 
+    enhanced comfort and game-changing support.</center><br><br>
+  </div>
+
+
+    <!-- Tallas -->
+  <div class="container-fl">
+    <h1>&nbsp;&nbsp;Tallas</h1>&nbsp;&nbsp;&nbsp;&nbsp;
+</button>
+<button type="button" class="btn btn-dark">40</button>
+&nbsp;&nbsp;
+
+</button>
+  <button type="button" class="btn btn-dark">41</button>
+  &nbsp;&nbsp;
+
+</button>
+<button type="button" class="btn btn-dark">42</button>
+&nbsp;&nbsp;
+
+<button type="button" class="btn btn-dark">43</button>
+</button>
+&nbsp;&nbsp;
+
+<button type="button" class="btn btn-dark">44</button>
+</button>
+&nbsp;&nbsp;
+
+<button type="button" class="btn btn-dark">45</button>
+</button>
+&nbsp;&nbsp;
+
+<button type="button" class="btn btn-dark">46</button>
+</button>
+
+    <!-- btn envio gratis -->&nbsp;&nbsp;
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Agregar al carrito 
+  </button>
+
+  <!-- btn Precio y agregar carrito -->
+  
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Datos del Producto </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              Precio: $170.000&nbsp; <br>
+              Su envio sera Gratis!!!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
+            <a href="Carrito.html"><button type="button" class="btn btn-primary">Finalizar Compra</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
