@@ -3,20 +3,23 @@
 {% load humanize %}
 {% load static %}
 
+
+<div class="titulo">
+  <h1><center>{{producto.marca}}  {{producto.nombre}}  </h1>  </center>
+</div>
+
 <div class="container-fluid">
-    <img src="{% static 'zapatillas/img/jordan37.png' %}" alt="" height="200" width=480>
-
-    <img src="{% static 'zapatillas/img/suelaJ37.png'%}" alt="" height="200" width="480">
-
-    <img src="{% static 'zapatillas/img//parJ37.png' %}" alt="" height="200" width="480">
+  {% if producto.imagen %}
+  <img src="{{producto.imagen.url}}"  alt="..." >
+  {% endif %} 
   </div>
 <!-- descrpcion -->
 
-<div class="container"> <center><br>One of the coldest on the hardwood, jordanXXXVII is absolutely fearless.
+<div class="container"> <center><br>One of the coldest on the hardwood, {{producto.nombre}} is absolutely fearless.
     He'll take any shot at any time, and when it's all on the line, look 
-    out, because jordan is about to steal the show. <br>The newest signature 
-    shoes from adidas Basketball and Kyrie Infinity are all about agility and
-    speed, the two elements that make Trae so dynamic. BOOST and Lightstrike 
+    out, because {{producto.marca}} is about to steal the show. <br>The newest signature 
+    shoes from adidas Basketball and {{producto.nombre}} are all about agility and
+    speed, the two elements that make him so dynamic. BOOST and Lightstrike 
     work in tandem with an <br>adaptive SCK360, semi-laceless upper to deliver 
     enhanced comfort and game-changing support.</center><br><br>
   </div>
@@ -67,16 +70,15 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-              Precio: $170.000&nbsp; <br>
+              Precio: ${{producto.precio | intcomma}} &nbsp; <br>
               Su envio sera Gratis!!!
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir Comprando</button>
-            <a href="Carrito.html"><button type="button" class="btn btn-primary">Finalizar Compra</button></a>
+            <a href="{% url 'carrito' %}"><button type="button" class="btn btn-primary">Finalizar Compra</button></a>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
 {% endblock %}

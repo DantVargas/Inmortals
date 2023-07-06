@@ -10,7 +10,7 @@
       <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-4">
         {% for p in productos %}
         <div class="col" >
-          <a href="#">
+          <a href="{% url 'producto_zapatilla' p.id %}">
             <div class="card" style="width: auto;">
                {% if p.imagen %}
                <img src="{{p.imagen.url}}" class="card-img-top" alt="..." >

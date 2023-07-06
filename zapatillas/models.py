@@ -23,9 +23,9 @@ class Producto(models.Model):
 class Item_carrito(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     producto = models.ForeignKey(Producto, on_delete=models.CASCADE)
-    cantidad = models.PositiveIntegerField(default=1)
+    quantity  = models.PositiveIntegerField(default=1)
     def __str__(self):
-        return f"{self.user.username}'s Cart: {self.producto.nombre} x {self.cantidad}"     
+        return f"{self.user.username}'s Cart: {self.producto.nombre} x {self.quantity }"     
     
 
 

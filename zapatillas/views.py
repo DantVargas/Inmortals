@@ -55,12 +55,12 @@ def eliminar_producto(request,id):
     producto.delete()
     return redirect(to="listar_zapatillas")
 
-
-def base_zapatillas(request):
    
-    productos = Producto.objects.all()
-    data = {"productos" : productos}
-    return render(request,'zapatillas/basezapatillas.html',data)
+def producto_zapatilla(request, id):
+    producto = get_object_or_404(Producto, id=id)
+    data = {"producto" : producto}
+    
+    return render(request, 'zapatillas/producto_zapatilla.html', data)
 
 
 

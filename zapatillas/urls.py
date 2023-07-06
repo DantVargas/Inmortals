@@ -21,7 +21,7 @@ urlpatterns = [
     
     path('carrito/agregar_carrito/<id>', views.agregar_carrito, name='agregar_carrito'),
 
-   
+    path('producto_zapatilla/<id>', views.producto_zapatilla, name='producto_zapatilla'),
 
 
     

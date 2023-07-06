@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-LOGIN_REDIRECT_URL = 'agregar_zapatillas', 'editar_zapatillas', 'listar_zapatillas'
+LOGIN_REDIRECT_URL = ''
 
 LOGOUT_REDIRECT_URL = ''
 
